@@ -1,6 +1,7 @@
 # How to
 
 1.  **Configure the script**: Open `run_prompts.sh` and update:
+    *   `PROJECT_PATH`: Local path to the project that should be analyzed
     *   `MODELS`: The list of models to use (format: `provider/model`)
     *   `PROMPTS`: The list of prompts to run
 
