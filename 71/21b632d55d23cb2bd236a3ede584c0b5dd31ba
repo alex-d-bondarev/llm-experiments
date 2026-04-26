@@ -1,0 +1,23 @@
+local_llm/README.md
+  ae6fd5fbd50e8b96 3-5,7,9,12,14,16-21
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.4",
+  "base_commit_sha": "7121b632d55d23cb2bd236a3ede584c0b5dd31ba",
+  "prompts": {
+    "ae6fd5fbd50e8b96": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_23568d693ffeyjWVdT7q93G4Tl",
+        "model": "github-copilot/claude-haiku-4.5"
+      },
+      "human_author": "Sasha Bondarev",
+      "messages": [],
+      "total_additions": 172,
+      "total_deletions": 44,
+      "accepted_lines": 87,
+      "overriden_lines": 1
+    }
+  }
+}
