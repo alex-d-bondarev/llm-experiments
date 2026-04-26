@@ -15,12 +15,15 @@ const expandTilde = (filePath) => {
 const PROJECT_PATH = expandTilde("~/github/demo-web-app");
 const RESULTS_PATH = expandTilde("~/github/llm-experiments/local_llm/results");
 const MODELS = [
-  { providerID: "github-copilot", modelID: "gpt-5.3-codex", name: "GitHub Copilot (GPT-5.3)" }
+  { providerID: "github-copilot", modelID: "gpt-4.1", name: "GitHub Copilot (GPT-4.1)" }
 ];
 const PROMPTS = [
-  "In the \"<path>\" folder you are given a legacy project \"ICU\". You have to understand how it works. Your goal is to output an improvement plan where you will summarise issues that you have found and create a step-by-step plan to fix them."
+  "In the \"<path>\" folder you are given a legacy project \"ICU\". You have to understand how it works. Your goal is to output an improvement plan where you will summarise issues that you have found and create a step-by-step plan to fix them.",
+  "I have some basic knowledge about HTML, CSS and JavaScript. But I do not know how NodeJS works. In the \"<path>\" folder you are given a legacy project \"ICU\". Please explain to me how `frontend` is implemented in this project.",
+  "You are an experienced software architect that cares about software best practicies, such as, but not limited to scalability, testability, stability, maintainability and readability. In the \"<path>\" folder you are given a legacy project \"ICU\". I need you to check the `.github/workflows/build.yml` CI pipeline. What are your impressions about it? Would you change anything?",
+  "You are an experienced software developer in test that cares about software best practicies, such as, but not limited to tests stability, readability and maintainability. In the \"<path>\" folder you are given a legacy project \"ICU\". I need you to check `Verify API Endpoints` step in the `.github/workflows/build.yml` pipeline. Is it acceptable or would you change anything?"
 ];
-const OUTPUT_FILENAMES = ["PLAN.md"];
+const OUTPUT_FILENAMES = ["IMPROVEMENT_PLAN.md", "FRONT_END.md", "BUILD_CI_IMPRESSIONS.md", "VERIFY_API.md"];
 
 
 // --- Main Script ---
