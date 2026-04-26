@@ -1,0 +1,16 @@
+{
+  "name": "local_llm",
+  "version": "1.0.0",
+  "description": "1.  Configuration: Open run_prompts.mjs and update the following variables at the top of the file to match your setup:     *   PROJECT_PATH: The absolute path to the code you want to analyze.     *   RESULTS_PATH: The absolute path where the results should be stored.     *   MODELS: The list of models to use.     *   PROMPTS: The list of prompts to run. 2.  Run the script: Execute the script from your terminal using Node.js:         `node run_prompts.mjs`",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@opencode-ai/sdk": "^1.14.25"
+  }
+}

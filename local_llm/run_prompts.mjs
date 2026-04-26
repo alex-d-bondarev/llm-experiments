@@ -12,9 +12,11 @@ const expandTilde = (filePath) => {
 };
 
 // --- Configuration ---
-const PROJECT_PATH = expandTilde("~/work/github/llm-experiments/local_llm");
-const RESULTS_PATH = expandTilde("~/work/github/llm-experiments/results");
-const MODELS = ["GPT-4o", "GPT-4.1"];
+const PROJECT_PATH = expandTilde("~/github/demo-web-app");
+const RESULTS_PATH = expandTilde("~/github/llm-experiments/local_llm/results");
+const MODELS = [
+  { providerID: "github-copilot", modelID: "gpt-5.3-codex", name: "GitHub Copilot (GPT-5.3)" }
+];
 const PROMPTS = [
   "In the \"<path>\" folder you are given a legacy project \"ICU\". You have to understand how it works. Your goal is to output an improvement plan where you will summarise issues that you have found and create a step-by-step plan to fix them."
 ];
@@ -25,14 +27,32 @@ const OUTPUT_FILENAMES = ["PLAN.md"];
 async function main() {
   console.log("Starting script...");
 
-  const { client } = await createOpencodeClient();
+  const client = createOpencodeClient({
+    baseUrl: "http://127.0.0.1:4096",
+  });
+  console.log("OpenCode client created.");
+
   const session = await client.session.create({ body: { title: "Code Analysis Automation" } });
+  if (!session) {
+    console.error("Failed to create session.");
+    console.error("Session response:", JSON.stringify(session, null, 2));
+    return;
+  }
+  
+  // Handle both response styles
+  const sessionId = session.data?.id || session.info?.id || session.id;
+  if (!sessionId) {
+    console.error("Failed to extract session ID.");
+    console.error("Session response:", JSON.stringify(session, null, 2));
+    return;
+  }
+  console.log("Session created:", sessionId);
 
 
   for (const model of MODELS) {
-    console.log(`\n--- Using Model: ${model} ---`);
+    console.log(`\n--- Using Model: ${model.name} ---`);
 
-    const modelResultsPath = path.join(RESULTS_PATH, model.replace(/[/.]/g, "_"));
+    const modelResultsPath = path.join(RESULTS_PATH, model.modelID.replace(/[/.]/g, "_"));
     await fs.mkdir(modelResultsPath, { recursive: true });
     console.log(`Results will be saved in: ${modelResultsPath}`);
 
@@ -43,24 +63,22 @@ async function main() {
 
       try {
         const result = await client.session.prompt({
-          path: { id: session.data.id },
+          path: { id: sessionId },
           body: {
-            // The model parameter in the SDK might expect an object with providerID and modelID.
-            // This is a placeholder and might need adjustment based on your opencode.json config.
-            // For now, we assume a simple string might work if the models are globally unique
-            // and have a default provider.
-            model: model,
+            model: { providerID: model.providerID, modelID: model.modelID },
             parts: [{ type: "text", text: promptText }],
           },
         });
 
-        const assistantResponse = result.data.parts.find(p => p.type === 'text')?.text || "No response text found.";
+        // Extract the response text from result.data.parts array
+        const textPart = result.data?.parts?.find(p => p.type === 'text');
+        const assistantResponse = textPart?.text || "No response text found.";
         const outputPath = path.join(modelResultsPath, outputFilename);
         await fs.writeFile(outputPath, assistantResponse);
         console.log(`Saved result to: ${outputPath}`);
 
       } catch (error) {
-        console.error(`Error processing prompt with model ${model}:`, error);
+        console.error(`Error processing prompt with model ${model.name}:`, error.message);
         const errorOutputPath = path.join(modelResultsPath, `ERROR_${outputFilename}`);
         await fs.writeFile(errorOutputPath, `Error processing prompt: ${promptText}\n\n${error.stack}`);
       }
