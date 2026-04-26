@@ -16,10 +16,9 @@ const PROJECT_PATH = expandTilde("~/work/github/llm-experiments/local_llm");
 const RESULTS_PATH = expandTilde("~/work/github/llm-experiments/results");
 const MODELS = ["GPT-4o", "GPT-4.1"];
 const PROMPTS = [
-  "Analyse the project in the given folder and write down your thoughts in a new \"ANALYSE.md\" file.",
-  "Explain to me how the code in \"<path>\" folder works"
+  "In the \"<path>\" folder you are given a legacy project \"ICU\". You have to understand how it works. Your goal is to output an improvement plan where you will summarise issues that you have found and create a step-by-step plan to fix them."
 ];
-const OUTPUT_FILENAMES = ["ANALYSE.md", "EXPLANATION.md"];
+const OUTPUT_FILENAMES = ["PLAN.md"];
 
 
 // --- Main Script ---
