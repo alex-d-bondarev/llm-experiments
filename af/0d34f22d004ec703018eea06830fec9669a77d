@@ -1,0 +1,23 @@
+local_llm/run_prompts.sh
+  ae6fd5fbd50e8b96 1-70
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.4",
+  "base_commit_sha": "af0d34f22d004ec703018eea06830fec9669a77d",
+  "prompts": {
+    "ae6fd5fbd50e8b96": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_23568d693ffeyjWVdT7q93G4Tl",
+        "model": "github-copilot/claude-haiku-4.5"
+      },
+      "human_author": "Sasha Bondarev",
+      "messages": [],
+      "total_additions": 0,
+      "total_deletions": 0,
+      "accepted_lines": 69,
+      "overriden_lines": 0
+    }
+  }
+}
