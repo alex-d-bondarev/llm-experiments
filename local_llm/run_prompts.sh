@@ -2,17 +2,16 @@
 
 # Configuration
 OPENCODE_URL="http://127.0.0.1:4096"
-PROJECT_PATH="<update_me>"
 
 MODELS=(
   "github-copilot/gpt-4.1"
 )
 
 PROMPTS=(
-  "In the \"$PROJECT_PATH\" folder you are given a legacy project \"ICU\". You have to understand how it works. Your goal is to output an improvement plan where you will summarise issues that you have found and create a step-by-step plan to fix them.",
-  "I have some basic knowledge about HTML, CSS and JavaScript. But I do not know how NodeJS works. In the \"$PROJECT_PATH\" folder you are given a legacy project \"ICU\". Please explain to me how `frontend` is implemented in this project.",
-  "You are an experienced software architect that cares about software best practicies, such as, but not limited to scalability, testability, stability, maintainability and readability. In the \"$PROJECT_PATH\" folder you are given a legacy project \"ICU\". I need you to check the `.github/workflows/build.yml` CI pipeline. What are your impressions about it? Would you change anything?",
-  "You are an experienced software developer in test that cares about software best practicies, such as, but not limited to tests stability, readability and maintainability. In the \"$PROJECT_PATH\" folder you are given a legacy project \"ICU\". I need you to check `Verify API Endpoints` step in the `.github/workflows/build.yml` pipeline. Is it acceptable or would you change anything?"
+  "In the current folder you are given a legacy project \"ICU\". You have to understand how it works. Your goal is to output an improvement plan where you will summarise issues that you have found and create a step-by-step plan to fix them.",
+  "I have some basic knowledge about HTML, CSS and JavaScript. But I do not know how NodeJS works. In the current folder you are given a legacy project \"ICU\". Please explain to me how 'frontend' is implemented in this project.",
+  "You are an experienced software architect that cares about software best practicies, such as, but not limited to scalability, testability, stability, maintainability and readability. In the current folder you are given a legacy project \"ICU\". I need you to check the '.github/workflows/build.yml' CI pipeline. What are your impressions about it? Would you change anything?",
+  "You are an experienced software developer in test that cares about software best practicies, such as, but not limited to tests stability, readability and maintainability. In the current folder you are given a legacy project \"ICU\". I need you to check 'Verify API Endpoints' step in the '.github/workflows/build.yml' pipeline. Is it acceptable or would you change anything?"
 )
 
 # Function to format duration
@@ -35,16 +34,15 @@ format_duration() {
   fi
 }
 
-echo "Starting script..."
+echo "\nStarting script...\n"
 
 for model in "${MODELS[@]}"; do
-  echo ""
-  echo "--- Using Model: $model ---"
+  echo "\n--- Using Model: $model ---\n"
   
   for prompt in "${PROMPTS[@]}"; do
     timestamp=$(date -u +"%Y-%m-%dT%H:%M:%S.000Z")
     echo ""
-    echo "[$timestamp] Running prompt: \"${prompt:0:50}...\""
+    echo "\n[$timestamp] Running prompt: \"${prompt:0:50}...\"\n"
     
     start_time=$(date +%s%N | cut -b1-13)
     
@@ -54,8 +52,7 @@ for model in "${MODELS[@]}"; do
     end_time=$(date +%s%N | cut -b1-13)
     elapsed_time=$((end_time - start_time))
     
-    echo "Response received in $(format_duration $elapsed_time)"
-    echo ""
+    echo "\nResponse received in $(format_duration $elapsed_time)\n"
     echo "--- Response ---"
     
     # Pretty print JSON if jq is available, otherwise print raw
@@ -69,5 +66,13 @@ for model in "${MODELS[@]}"; do
   done
 done
 
-echo ""
-echo "Script finished."
+echo "\nMake some sounds\n"
+
+if command -v afplay &> /dev/null; then
+  for sound in /System/Library/Sounds/*; do
+      if [ -f "$sound" ]; then
+          afplay "$sound"
+      fi
+  done
+
+echo "\nScript finished.\n"

@@ -1,19 +1,18 @@
 # How to
 
-1.  **Configure the script**: Open `run_prompts.sh` and update:
-    *   `PROJECT_PATH`: Local path to the project that should be analyzed
+1.  Configure the script: Open `run_prompts.sh` and update:
     *   `MODELS`: The list of models to use (format: `provider/model`)
     *   `PROMPTS`: The list of prompts to run
-
-2.  **Start the OpenCode server** in one terminal:
-    ```bash
-    opencode serve --port 4096
-    ```
-
-3.  **Run the script** in another terminal:
-    ```bash
-    ./local_llm/run_prompts.sh
-    ```
+2. Copy `run_prompts.sh` to a project that needs to be analyzed.
+3. Start 2 shell sessions in a project that needs to be analyzed:
+   1. Start the OpenCode server in first session:
+       ```bash
+       opencode serve --port 4096
+       ```
+   2. Run the script in the second session:
+       ```bash
+       ./run_prompts.sh
+       ```
 
 The script will:
 - Log timestamp (with seconds) before sending each prompt
