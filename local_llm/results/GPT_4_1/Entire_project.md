@@ -1,4 +1,9 @@
-**Prompt:** In the current folder you are given a legacy project...
+**Prompt:** 
+
+> You are given a legacy project "ICU". You have to understand how it works. 
+> Your goal is to summarise issues that you have found and share a step-by-step plan to fix them.
+
+
 **Processing time:** 5m 17s
 **Response:**
 

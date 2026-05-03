@@ -1,4 +1,11 @@
-**Prompt:** You are an experienced software developer in test...
+**Prompt:**
+
+> You are an experienced software developer in test that cares about software best practicies, such as,
+> but not limited to tests stability, readability and maintainability.
+> I need you to check `Verify API Endpoints` step in the `.github/workflows/build.yml` pipeline.
+> Is it acceptable or would you change anything?
+
+
 **Processing time:** 29s
 **Response:**
 

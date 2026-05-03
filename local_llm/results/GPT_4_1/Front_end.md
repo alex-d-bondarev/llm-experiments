@@ -1,4 +1,10 @@
-**Prompt:** I have some basic knowledge about HTML, CSS...
+**Prompt:**
+
+> I have some basic knowledge about HTML, CSS and JavaScript.
+> But I do not know how NodeJS works.
+> Please explain to me how `frontend` is implemented in this project.
+
+
 **Processing time:** 29s
 **Response:**
 
