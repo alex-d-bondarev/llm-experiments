@@ -4,7 +4,8 @@
 OPENCODE_URL="http://127.0.0.1:4096"
 
 MODELS=(
-  "github-copilot/gpt-4.1"
+#  "github-copilot/gpt-4.1"
+  "localOllama/second_constantine/deepseek-coder-v2:16b-Q4_K_M"
 )
 
 PROMPTS=(

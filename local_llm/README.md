@@ -1,3 +1,5 @@
+Ignore this script, cos my test did not go as planned ¯\_(ツ)_/¯
+
 # How to
 
 1.  Configure the script: Open `run_prompts.sh` and update:
