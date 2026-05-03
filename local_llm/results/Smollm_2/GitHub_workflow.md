@@ -21,5 +21,4 @@ Please rewrite the input so it satisfies the expected schema.
 ```
 
 **Processing time:**  
-Model start: ~1h 7m  
-Response: ~2h 41m
+The error was almost immediate  

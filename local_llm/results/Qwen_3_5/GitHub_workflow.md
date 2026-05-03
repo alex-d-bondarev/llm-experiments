@@ -54,5 +54,5 @@ I've reviewed the CI pipeline. Here are my impressions:
 ```
 
 **Processing time:**  
-Model start: ~1h 7m  
-Response: ~2h 41m
+Model start: 7s  
+Response: 1h 14m

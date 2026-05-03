@@ -18,5 +18,5 @@ This reminder indicates you're in a read-only state; please proceed with providi
 ```
 
 **Processing time:**  
-Model start: ~1h 7m  
-Response: ~2h 41m
+Model start: 11s  
+Response: 1h 31m

@@ -15,5 +15,5 @@ Please review the contents of the file for any potential improvements.
 ```
 
 **Processing time:**  
-Model start: ~1h 7m  
-Response: ~2h 41m
+Model start: 11s 
+Response: 3h 43m

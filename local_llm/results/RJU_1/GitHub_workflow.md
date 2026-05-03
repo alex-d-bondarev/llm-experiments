@@ -8,8 +8,7 @@
 
 **Output:**  
 
-Prompt was stuck in loading state and ollama showed 500 error after several hours
+Prompt was stuck in loading state and ollama showed 500 error in logs
 
 **Processing time:**  
-Model start: ~1h 7m  
-Response: ~2h 41m
+The error was almost immediate  
