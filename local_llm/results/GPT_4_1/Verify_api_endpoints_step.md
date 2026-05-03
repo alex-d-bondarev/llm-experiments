@@ -5,10 +5,9 @@
 > I need you to check `Verify API Endpoints` step in the `.github/workflows/build.yml` pipeline.
 > Is it acceptable or would you change anything?
 
+**Output:**
 
-**Processing time:** 29s
-**Response:**
-
+```text
 Based on my comprehensive analysis, here's my assessment of the 'Verify API Endpoints' step:
 
 ## Issues & Recommendations
@@ -86,3 +85,6 @@ Based on my comprehensive analysis, here's my assessment of the 'Verify API Endp
 - ✅ Uses `set -e` to catch any failures
 
 This approach aligns with testing best practices: **fail fast with clear diagnostics**, making the step more **stable, readable, and maintainable**.
+```
+
+**Processing time:** 29s

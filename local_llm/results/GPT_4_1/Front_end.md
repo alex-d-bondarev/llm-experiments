@@ -4,10 +4,9 @@
 > But I do not know how NodeJS works.
 > Please explain to me how `frontend` is implemented in this project.
 
+**Output:**
 
-**Processing time:** 29s
-**Response:**
-
+```text
 Perfect! Now I have a complete picture. Let me explain how the frontend is implemented:
 
 ## Frontend Implementation Overview
@@ -124,3 +123,6 @@ In development, you could open HTML files directly in a browser, but in producti
 ---
 
 **Summary**: The frontend is a simple Node.js server that delivers HTML/CSS/JS to browsers. The actual interactivity happens in the browser using vanilla JavaScript that directly talks to the backend microservices. Node.js handles the server infrastructure, but the "work" is done by HTML, CSS, and JavaScript executing in the user's browser.
+```
+
+**Processing time:** 29s

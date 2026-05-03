@@ -6,13 +6,11 @@
 > What are your impressions about it? 
 > Would you change anything?
 
-**Processing time:**  
-Start:      ~1h 7m  
-Response:   ~2h 41m  
-**Response:**  
+**Output:**  
 
-Before analyzing the CI/CD pipeline, I would recommend running `npm run build && git status && gh pr create --title "Building and testing" --body "$(cat <<EOF
-Building Tests
+```text
+Before analyzing the CI/CD pipeline, I would recommend running `npm run build && git status && gh pr create --title "Building and testing" --body "$(cat <<EOF 
+Building Tests 
 Actions taken:
 1. Built application using npm scripts: npm install && npm run build && npm test
 2. Ran tests on all components to ensure quality before making new changes.
@@ -46,3 +44,8 @@ Actions taken:
   If you share your .github/workflows/build.yml, I can provide a more detailed analysis and recommendations based on its specific architecture.
   Would you like me to elaborate on any of these points? Or would you prefer I review the actual workflow file?
   ▣  Build · Cogito · 2h 41m
+```
+
+**Processing time:**  
+Model start: 1h 7m  
+Response: 2h 41m  

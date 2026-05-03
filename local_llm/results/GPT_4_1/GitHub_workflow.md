@@ -6,9 +6,9 @@
 > What are your impressions about it?
 > Would you change anything?
 
-**Processing time:** 16s
-**Response:**
+**Output:**
 
+```text
 Now I have a clear picture. Here are my impressions and recommendations:
 
 ## Analysis of `.github/workflows/build.yml`
@@ -97,3 +97,6 @@ curl -f http://localhost:5001/item && break
 ```
 
 **Bottom line:** This pipeline works but is fragile and incomplete. The port mismatch suggests it may not be catching real failures. I'd prioritize fixing that first, then improving test coverage and health checks.
+```
+
+**Processing time:** 16s

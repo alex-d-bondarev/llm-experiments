@@ -6,9 +6,9 @@
 > What are your impressions about it?
 > Would you change anything?
 
-**Processing time:**  
-Start:      
-Response:   
-**Response:**  
+**Output:**  
 
 OpenCode did not receive response. Ollama logs showed 500 error
+
+**Processing time:**  
+The error was almost immediate  

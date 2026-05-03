@@ -6,9 +6,10 @@
 > What are your impressions about it?
 > Would you change anything?
 
-**Processing time:**  
-Start:      
-Response:   
-**Response:**  
+**Output:**  
 
-Prompt stuck in loading state and ollama showed 500 error after ~2 hours
+Prompt was stuck in loading state and ollama showed 500 error after several hours
+
+**Processing time:**  
+Model start: ~1h 7m  
+Response: ~2h 41m

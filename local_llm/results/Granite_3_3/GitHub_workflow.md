@@ -6,11 +6,9 @@
 > What are your impressions about it?
 > Would you change anything?
 
-**Processing time:**  
-Start:      ~5s
-Response:   ~2h 42m
-**Response:**  
+**Output:**
 
+```text
 Without access to the actual file content of .github/workflows/build.yml, I can't directly analyze your specific GitHub Actions workflow. However, I can provide general suggestions based on best practices for building CI pipelines:
 1. Clarity and Organization: Check if the workflow is modular and easily understandable. Use comments to explain any complex logic or steps not immediately evident from their declaration.
 2. Stability:
@@ -28,3 +26,8 @@ Without access to the actual file content of .github/workflows/build.yml, I can'
 7. Documentation: Include inline comments explaining complex setups, critical steps, and nonstandard configurations.
    To get specific advice on your .github/workflows/build.yml, please upload the file or provide snippets that concern you. Remember, these are general guidelines - each team might prioritize differently based on specific project or organizational needs.
    ▣  Build · Granite 3.3 · 2h 42m
+```
+
+**Processing time:**  
+Model start: 5s  
+Response: ~2h 42m  

@@ -5,12 +5,10 @@
 > I need you to check the `.github/workflows/build.yml` CI pipeline.
 > What are your impressions about it?
 > Would you change anything?
+   
+**Output:**  
 
-**Processing time:**  
-Start:      
-Response:   
-**Response:**  
-
+```text
 First, let me locate .github/workflows/build.yml to review its structure and contents.
 ✱ Glob "**/.github/workflows/build.yml" (1 match)
 The file exists. Let me read its full contents to analyze its structure and design.
@@ -41,3 +39,8 @@ Impressions and areas for improvement:
 ---
 Next question: Should we explore these areas specifically or should you prefer a broad overhaul to adhere to best practices?
 ▣  Plan · Ministral 3 · 2h 7m
+```
+
+**Processing time:**  
+Model start: 11s  
+Response: 2h 7m

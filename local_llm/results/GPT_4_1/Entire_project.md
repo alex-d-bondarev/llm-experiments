@@ -3,10 +3,9 @@
 > You are given a legacy project "ICU". You have to understand how it works. 
 > Your goal is to summarise issues that you have found and share a step-by-step plan to fix them.
 
+**Output:**
 
-**Processing time:** 5m 17s
-**Response:**
-
+```text
 # ICU v1.0.0 - Comprehensive Improvement Plan
 
 ## Executive Summary
@@ -2018,3 +2017,6 @@ This improvement plan provides a structured approach to transform ICU from a lea
 5. **Monitor production-like environment** for performance impacts
 
 The project will be significantly more reliable, secure, and maintainable after implementing all improvements.
+```
+
+**Processing time:** 5m 17s

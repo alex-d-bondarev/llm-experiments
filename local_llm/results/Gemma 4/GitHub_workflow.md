@@ -6,11 +6,9 @@
 > What are your impressions about it?
 > Would you change anything?
 
-**Processing time:**  
-Start:      ~8s
-Response:   ~20m 56s  
-**Response:**  
+**Output:**  
 
+```text
 The CI pipeline is functional but has several areas for improvement regarding stability, maintainability, and testability.
 Impressions:
 1.  Tight Coupling/Fragility: The pipeline relies heavily on executing docker compose build, docker compose up -d, and specific curl calls against localhost ports. This makes the pipeline brittle; if the Docker Compose services change their port, health check endpoint, or internal service dependencies, the entire pipeline will likely fail.
@@ -24,3 +22,8 @@ Impressions:
 4.  Abstract Endpoints: Abstract the endpoint verification step. Instead of hardcoding IPs and ports, the service test step should reference the service names defined in docker-compose.yml and rely on internal networking if possible, or use a service mesh/gateway approach if complexity increases.
     Overall, it achieves the goal of building and testing, but it lacks the robustness expected of a mature CI/CD process.
     ▣  Build · Gemma 4 · 20m 56s
+```
+
+**Processing time:**  
+Model start: 8s  
+Response: 20m 56s

@@ -6,11 +6,9 @@
 > What are your impressions about it?
 > Would you change anything?
 
-**Processing time:**  
-Start:      
-Response:   
-**Response:**  
+**Output:**  
 
+```text
 Thinking: The user wants me to review a CI/CD pipeline file, so I need to read it first before I can provide any impressions or recommendations.
 → Read .github/workflows/build.yml
 Thinking: Let me analyze this CI pipeline and provide impressions and recommendations.
@@ -53,3 +51,8 @@ I've reviewed the CI pipeline. Here are my impressions:
 5. Add timeout-minutes
 6. Consider caching dependencies per language (node, maven, pip)
    Would you like me to provide a refactored version?
+```
+
+**Processing time:**  
+Model start: ~1h 7m  
+Response: ~2h 41m
