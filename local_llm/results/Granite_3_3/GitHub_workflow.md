@@ -30,4 +30,4 @@ Without access to the actual file content of .github/workflows/build.yml, I can'
 
 **Processing time:**  
 Model start: 5s  
-Response: ~2h 42m  
+Response: 2h 42m  
