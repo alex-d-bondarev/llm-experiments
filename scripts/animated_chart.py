@@ -3,7 +3,7 @@ import os
 import time
 from typing import NamedTuple
 
-GRAPH_NAME = "Initial models"
+GRAPH_NAME = "A new list is born"
 PADDING = 4
 TERMINAL_WIDTH = 100
 
@@ -59,6 +59,8 @@ def _draw_chart(data: list[ParsedRecord], animation_progress=1.0):
 
     longest_name = max(len(record.name) for record in data)
 
+    print(f"{' ' * longest_name} |")
+
     for record in data:
         left_column = f"{record.name.ljust(longest_name)}"
 
@@ -97,12 +99,18 @@ def _print_delimiter():
 
 if __name__ == "__main__":
     calculate_progress_and_draw({
-        "GPT-4.1": "Cloud",
-        "deepseek-coder-v2:16b-Q4_K_M": "8.9GB",
-        "devstral:24b": "14GB",
-        "gemma4:e4b-it-q8_0": "10GB",
-        "glm4:9b-chat-q8_0": "10GB",
-        "gpt-oss-safeguard:20b": "14GB",
-        "qwen3.5:9b-mxfp8": "12GB",
-        "starcoder2:15b-q6_K": "13GB",
+        "cogito:3b-v1-preview-llama-fp16": "7.2GB",
+        "gemma4:e2b-it-q4_K_M": "7.2GB",
+        "granite3.3:8b": "4.9GB",
+        "hermes3:8b-llama3.1-q6_K": "6.6GB",
+        "llama3.2:3b-instruct-fp16": "6.4GB",
+        "ministral-3:3b-instruct-2512-fp16": "7.7GB",
+        "mistral-nemo:12b-instruct-2407-q4_K_M": "7.5GB",
+        "nemotron-3-nano:4b-bf16": "5.1GB",
+        "phi4-mini:3.8b-fp16": "7.7GB",
+        "qwen2.5-coder:14b-instruct-q3_K_L": "7.9GB",
+        "qwen3.5:9b-q4_K_M": "6.6GB",
+        "rnj-1:8b-instruct-q4_K_M": "5.1GB",
+        "smollm2:1.7b-instruct-fp16": "3.4GB",
+        "starcoder2:7b-q8_0": "7.6GB",
     })
