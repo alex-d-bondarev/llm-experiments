@@ -1,20 +1,32 @@
 # How to run
 
+1. Clone this repo
+   ```shell
+   git clone https://github.com/alex-d-bondarev/llm-experiments.git
+   ```
+1. Navigate to the `benchmark folder`
+   ```shell
+   cd ./faster_local_llm/benchmark
+   ```
 1. Make sure [ollama](https://ollama.com/download/mac) is installed
    ```shell
    curl -fsSL https://ollama.com/install.sh | sh
    ```
-2. Make sure [uv](https://docs.astral.sh/uv/getting-started/installation/) is installed, like:
+1. Make sure [uv](https://docs.astral.sh/uv/getting-started/installation/) is installed, like:
    ```shell
    curl -LsSf https://astral.sh/uv/install.sh | sh
    ```
-2. Install dependencies
+1. Install dependencies
    ```shell
    uv sync
    ```
-3. Run the test
+1. Start ollama
    ```shell
-   uv run llm_benchmark run
+   ollama serve
+   ```
+1. Run the test
+   ```shell
+   uv run llm_benchmark run --custombenchmark=./custombenchmarkmodels.yml
    ```
 
 # Results
