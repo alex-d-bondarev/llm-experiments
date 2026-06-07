@@ -160,7 +160,7 @@ Average of eval rate:  2.2  tokens/s
 ----------------------------------------
 ```
 
-## M1 with 16GB RAM
+## MacBook M1 with 16GB RAM
 
 ```
 ----------Apple Mac---------
